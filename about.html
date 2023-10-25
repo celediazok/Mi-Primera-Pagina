@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="container-nav"> <!--Aqui va el navegador.-->
+        <nav class="navbar">
+            <a href="index.html" class="brand">Mi pagina web</a>
+            <ul class="nav-links">
+                <!--Para movernos dentro de la barra de navegacion y que nos lleve a otras paginas (otros html) debo cambiar los # por la ruta en que estan los nuevos html.-->
+                <!--Como en este caso, estan en la misma carpeta, no hay que poner ninguna ruta si no solamente el nombre del archivo al que queremos ir-->
+                <!--Para que funcionen todos los links, deben estar todas las rutas puestas completamente y copiar la clase navbar (esta clase) reemplazandola en todos los archivos-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li> 
+            </ul>
+        </nav>
+        <button class="button-menu-toggle">MENU</button>
+     </header>
+
+     <main> <!--Aqui va el contenido-->
+        <div class="container">
+            <h1> A cerca de... </h1>
+            <p> Aqui encontraras informacion a cerca de nuestra historia. A disfrutar! </p>
+        </div>
+         <!--Ahora pondremos imagenes. Para ello hay que hacer lo siguiente-->
+         <div class="imagen-cont">
+            <img src="imagenes/imagen1.jpg" alt="Descripcion imagen 1"> <!--Para crear la ruta de imagenes, debemos incorporarlas en la misma carpeta del codigo que venimos trabajando-->
+            <img src="imagenes/imagen2.png" alt="Descripcion imagen 2">
+        </div>    
+     </main>
+
+     <footer> <!--Este es el pie de pagina-->
+        <p> Informacion sobre el desarrollador o la compañia </p>
+        <button onclick="showAlert()"> ¡Haz click en mi! </button> <!--Creamos un boton que con el Onclick hace que se ejecute la funcion de Javascript que nosotros queremos. Cada vez que apretamos el boton, va a aparecer el mensaje de alerta-->
+     </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

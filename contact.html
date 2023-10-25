@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Las siguientes son etiquetas semanticas: son divs pero con otro nombre. Le dice al navegador cual es la cabecera de la pagina, cual es el contenido principal y cual el pie de pagina-->
+    <header class="container-nav"> <!--Aqui va el navegador.-->
+        <nav class="navbar">
+            <a href="index.html" class="brand">Mi pagina web</a>
+            <ul class="nav-links">
+                <!--Para movernos dentro de la barra de navegacion y que nos lleve a otras paginas (otros html) debo cambiar los # por la ruta en que estan los nuevos html.-->
+                <!--Como en este caso, estan en la misma carpeta, no hay que poner ninguna ruta si no solamente el nombre del archivo al que queremos ir-->
+                <!--Para que funcionen todos los links, deben estar todas las rutas puestas completamente y copiar la clase navbar (esta clase) reemplazandola en todos los archivos-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li> 
+            </ul>
+        </nav>
+        <button class="button-menu-toggle">MENU</button>
+     </header>
+
+     <main> <!--Aqui va el contenido-->
+        <div class="container">
+            <h1>Contacto</h1>
+            <p>¡Contactanos por cualquier consulta!</p>
+            <!--Ahora vamos a crear un formulario que pida el correo electronico de la persona. Se pone form[id=myForm]>label[for=email]{correo electronico: }+input[type=email][id=email][name=email][required]+button[type=submit]{Enviar} -->
+            <form action="" id="myForm">
+                <label for="email">correo electronico: </label>
+                <input type="email" id="email" name="email" required="required">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+     </main>
+
+     <footer> <!--Este es el pie de pagina-->
+        <p> Informacion sobre el desarrollador o la compañia </p>
+        <button onclick="showAlert()"> ¡Haz click en mi! </button> <!--Creamos un boton que con el Onclick hace que se ejecute la funcion de Javascript que nosotros queremos. Cada vez que apretamos el boton, va a aparecer el mensaje de alerta-->
+     </footer>
+
+
+
+    
+    <button onclick="showAlert()"> ¡Haz click en mi! </button> <!--Creamos un boton que con el Onclick hace que se ejecute la funcion de Javascript que nosotros queremos. Cada vez que apretamos el boton, va a aparecer el mensaje de alerta-->
+    
+    <script src="script.js"></script>
+</body>
+</html>

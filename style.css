@@ -1,0 +1,158 @@
+body, ul{
+    margin: 0; /*Es para sacar el margen predeterminado por el navegador. El margen determinado es cuando en inspeccionar dice "user agent stylesheet"*/
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 0;
+
+}
+
+main {
+    min-height: 71vh;
+}
+
+.container {
+    max-width: 800px; /*El maximo que puede ocupar el ancho de nuestro contenedor*/
+    margin: auto; /*Se centra automaticamente en el eje horizontal*/
+    padding: 20px; /*Distancia entre el borde de la pagina y nuestro contenido*/
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /*Hace que cuando no hay mas lugar, las columnas se ponen una abajo de la otra*/
+    margin: 10px;
+}
+
+.column {
+    flex: 1; /*Cuando esta en 1, todas las columnas tienen el mismo tamaño*/
+    padding: 10px;
+}
+
+.container-nav {
+    display: flex;
+    padding: 10px;
+    height: 50px;
+    background-color:cadetblue;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /*Para que haga efecto el space-between de arriba debemos poner un widht del 100%*/
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+/*El siguiente clase o grupo abarca a todos los a dentro de un li (lista)*/
+li>a {
+    padding: 8px 45px; /*Esto hace que se vea mas separados los intems de la barra de navegacion*/
+}
+
+li{
+    list-style-type: none; /*Para sacar los puntos al lado de los items de la lista*/
+}
+
+a{
+    color: black;
+    text-decoration: none; /*Se usa para quitar el subrayado de los items de la barra*/
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.button-menu-toggle {
+    display: none;
+}
+
+.imagen-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    height: 350px;
+    object-fit: cover;
+    text-align: center;
+    margin: 10px;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+footer {
+    position: relative;
+    bottom: 0; /*Esto es para posicionarlo abajo*/
+    z-index: -1; /*Hace que este en una capa inferior cuando abrimos el menu en un dispositivo mas chico*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: cadetblue;
+    min-height: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+img {
+    height: 200px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) { /*Hace que la siguiente regla, solo se aplique hasta llegar a los 600 px*/
+    .column {
+        flex: 100%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .button-menu-toggle {
+        display: block;
+        background-color: antiquewhite;
+        border: none;
+        border-radius: 50px;
+        padding: 0 24px;
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    /*Si un elemento tiene la clase nav-links + nav-links-responsive se activa el siguiente codigo*/
+    .nav-links.nav-links-responsive {
+        position: absolute;
+        display: flex;
+        background-color: antiquewhite;
+        width: 100%;
+        height: 100%;
+        top: 70px;
+        left: 0;
+        flex-direction: column;
+        padding-top: 10%;
+        align-items: center;
+        gap: 70px;
+        font-size: 40px;
+    }
+}
+
+     .imagen-cont {
+        flex-direction: column;
+     }
+
+     .video-container {
+        padding: 10px;
+        gap: 5px;
+     }
+
+     iframe, video {
+        max-width: 90%;
+     }

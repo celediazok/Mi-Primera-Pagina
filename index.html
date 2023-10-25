@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!--Las siguientes son etiquetas semanticas: son divs pero con otro nombre. Le dice al navegador cual es la cabecera de la pagina, cual es el contenido principal y cual el pie de pagina-->
+     <header class="container-nav"> <!--Aqui va el navegador.-->
+        <nav class="navbar">
+            <a href="index.html" class="brand">Mi pagina web</a>
+            <ul class="nav-links">
+                <!--Para movernos dentro de la barra de navegacion y que nos lleve a otras paginas (otros html) debo cambiar los # por la ruta en que estan los nuevos html.-->
+                <!--Como en este caso, estan en la misma carpeta, no hay que poner ninguna ruta si no solamente el nombre del archivo al que queremos ir-->
+                <!--Para que funcionen todos los links, deben estar todas las rutas puestas completamente y copiar la clase navbar (esta clase) reemplazandola en todos los archivos-->
+                <!--Para cambiar esto en todas las paginas debo apretar Control-Shift-H y ahi cambiar el nombre de la ruta que quiero cambiar-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li> 
+            </ul>
+        </nav>
+        <button class="button-menu-toggle">MENU</button>
+     </header>
+
+     <main> <!--Aqui va el contenido-->
+        <div class="container">
+            <h1> Bienvenido a mi primer Website </h1>
+            <section> <!--La etiqueta section divide mi contenido en secciones-->
+                <h2>Presentacion</h2>
+                <p> Soy Celeste y esta es mi primera pagina web </p>
+                <p> Estoy aprendiendo desarrollo web para crear sitios visualmente atrapantes </p>
+                </section>
+            <section>
+                <h2> Lo que se viene.. </h2>
+                <p> A lo largo de este curso aprendere HTML, CSS, JS. Esto me ayudara a crear una base solida en el desarrolo web front-end</p>
+            </section> 
+        </div>
+        <div class="video-container">
+            <!--La siguiente etiqueta ifram que lo que hace es ilustrar/ agregar un video de youtube (por ejemplo). Para eso vamos a youtube y ponemos compartir (abajo del video) y luego insertar y ahi tira el codigo que hay que copiar aqui como iframe-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/goPvm6UDFL0?si=nB-OBbWxtA8mKTC2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+            <!--La siguiente etiqueta es para agregar videos desde nuestra computadora. Para eso creamos una carpeta de video dentro de la carpeta donde esta nuestro HTML. luego ponemos la misma altura y ancho que el video de youtube-->
+            <video width="560" height="315" src="videos/WhatsApp Video 2023-10-17 at 22.57.03.mp4"></video>
+        </div>
+     </main>
+
+     <footer> <!--Este es el pie de pagina-->
+        <p> Informacion sobre el desarrollador o la compañia </p>
+        <button onclick="showAlert()"> ¡Haz click en mi! </button> <!--Creamos un boton que con el Onclick hace que se ejecute la funcion de Javascript que nosotros queremos. Cada vez que apretamos el boton, va a aparecer el mensaje de alerta-->
+     </footer>
+
+     <script src="script.js"></script>
+
+</body>
+</html>
