@@ -107,6 +107,11 @@ img {
     justify-content: center;
 }
 
+.saludo {
+    text-align: center;
+
+}
+
 @media (max-width: 768px) { /*Hace que la siguiente regla, solo se aplique hasta llegar a los 600 px*/
     .column {
         flex: 100%;
